@@ -15,7 +15,7 @@ def inicio():
     usuario=request.form.get("usuario")
     contrasena=request.form.get("contraseña")
     maquina1='localhost'
-    nombredb1='GN'
+    nombredb1='pelis'
     conex= pymysql.connect(host=maquina1,user=usuario,password=contrasena,database=nombredb1)
     datos=Mostrar_Profesores(conex)
     return render_template("inicio.html",datos=datos)
