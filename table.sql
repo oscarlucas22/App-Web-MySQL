@@ -1,3 +1,13 @@
+--Creación de la base de datos y del usuario:
+
+CREATE DATABASE pelis;
+
+CREATE USER 'oscar'@'%' IDENTIFIED BY 'asdasd';
+GRANT ALL PRIVILEGES ON pelis.* to 'oscar'@'%';
+flush privileges;
+USE pelis;
+
+
 -- Creación de tabla --
 
 CREATE TABLE peliculas (
